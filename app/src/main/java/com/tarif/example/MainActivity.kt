@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.tarif.example.Settings.helloPowerPref
 import com.tarif.example.Settings.time
 import com.tarif.example.databinding.ActivityMainBinding
+import com.tarif.powerprefs.PowerPref
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -29,6 +30,8 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        val pref = PowerPref.getInstance(this)
+        val item = pref.getString("key",null)
 
 
     }

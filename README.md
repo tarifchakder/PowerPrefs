@@ -8,6 +8,19 @@
 
 ## Usage
 
+This is the basic usage, you can get values (specifying a default value or not) and save values like so:
+
+```kotlin
+// create an singleton instance
+val pref = PowerPref.getInstance(this)
+
+// get item 
+pref.getString("key",null)
+
+// save method save item all supported sharedPreferences
+pref.save("key","your value")
+
+```
 
 ## License
 
