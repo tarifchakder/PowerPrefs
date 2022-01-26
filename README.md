@@ -24,10 +24,7 @@ pref.save("key","your value")
 
 But I highly  Recommend to use singleton class
 
-create an object 
-```kotlin
-Setting.kt
-```
+create an object ```Settings.kt```
 
 ## License
 
