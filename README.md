@@ -26,6 +26,55 @@ But I highly  Recommend to use singleton class
 
 create an object ```Settings.kt```
 
+```kotlin
+object Settings {
+
+    private val pref = PowerPref.getInstance(ContextProvider.appContext)
+
+    var helloPowerPref: String
+        get() = pref.getString("key", "Hello PowerPref !!") ?: "Hello PowerPref !!"
+        set(value) = pref.save("key", value)
+
+    var time: String
+        get() = pref.getString("time", "Today") ?: "Today"
+        set(value) = pref.save("time", value)
+
+
+}
+```
+
+now simply access anywhere 
+
+```kotlin
+class MainActivity : AppCompatActivity() {
+    
+    @SuppressLint("SetTextI18n")
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        bind = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(bind.root)
+
+        // get item from shared pref
+        val item1 = Settings.helloPowerPref
+        val item2 = Settings.time
+
+        bind.txt.text = item2 + "  "+ item1
+
+        bind.btn.setOnClickListener {
+            // save item t
+            Settings.time = "Next Day"
+            Settings.helloPowerPref = "Successfully saved "
+            
+            bind.txt.text = Settings.time + "  "+ Settings.helloPowerPref
+
+        }
+        
+
+    }
+    
+}
+```
+
 ## License
 
 ```text

@@ -30,10 +30,6 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        val pref = PowerPref.getInstance(this)
-        val item = pref.getString("key",null)
-
-
     }
 
     @SuppressLint("SimpleDateFormat")
