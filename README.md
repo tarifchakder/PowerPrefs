@@ -79,6 +79,13 @@ class MainActivity : AppCompatActivity() {
 Don't forget to star ⭐ the repo it motivates me to share more open source
 </p>
 
+
+## Donation
+
+If this project help you reduce time to develop, you can give me a cup of coffee :)
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/tarifchakder)
+
 ## License
 
 ```text
