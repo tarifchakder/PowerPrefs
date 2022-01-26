@@ -2,9 +2,33 @@
 
 [![](https://img.shields.io/badge/API-16%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=16#l16)
 
+[![](https://jitpack.io/v/tarifchakder/PowerPrefs.svg)](https://jitpack.io/#tarifchakder/PowerPrefs)
+
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/tarifchakder)
 
 ## Repository
+
+Add this in your root build.gradle file (not your module build.gradle file):
+
+```kotlin
+allprojects {
+	repositories {
+		...
+		maven { url "https://jitpack.io" }
+	}
+}
+```
+
+## Dependency
+
+Add this to your module's build.gradle file (make sure the version matches the JitPack badge above):
+
+```kotlin
+dependencies {
+	...
+    implementation 'com.github.tarifchakder:PowerPrefs:1.0.0'
+}
+```
 
 ## Usage
 
