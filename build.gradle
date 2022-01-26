@@ -1,0 +1,35 @@
+
+buildscript {
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.4"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext{
+    packageId = "com.tarif.example"
+    versionName = "1.0.0"
+    versionCode = 1
+    compileSDK = 31
+    minSDK = 16
+    targetSDK = 31
+    kotlinSDK = '1.7.0'
+    preference = '1.1.1'
+    material = '1.4.0'
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}

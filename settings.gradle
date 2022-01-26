@@ -1,0 +1,3 @@
+rootProject.name = "PowerPrefs"
+include ':app'
+include ':lib'
