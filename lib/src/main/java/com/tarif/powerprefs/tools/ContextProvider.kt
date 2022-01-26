@@ -1,9 +1,8 @@
-package com.tarif.powerprefs
+package com.tarif.powerprefs.tools
 
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
-import android.content.res.Resources
 import java.lang.reflect.InvocationTargetException
 
 /**
@@ -20,7 +19,7 @@ object ContextProvider {
     val appContext: Context
         @SuppressLint("DiscouragedPrivateApi", "PrivateApi")
         get() {
-            return if (::context.isInitialized) context
+            return if (ContextProvider::context.isInitialized) context
             else {
                 try {
                     context = Class.forName("android.app.ActivityThread").getDeclaredMethod("currentApplication").invoke(null) as Application

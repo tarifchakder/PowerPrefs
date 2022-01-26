@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.core.content.edit
 import androidx.preference.PreferenceManager
-import com.tarif.powerprefs.ContextProvider.appContext
+import com.tarif.powerprefs.tools.ContextProvider.appContext
 import com.tarif.powerprefs.PowerPref.init
 import com.tarif.powerprefs.tools.SingletonHolder
 
@@ -31,6 +31,4 @@ object PowerPref : SingletonHolder<SharedPreferences, Context>({ init(it.applica
             else -> throw IllegalArgumentException("value class is invalid!")
         }
     }
-
-    var powerPref = init(appContext)
 }
