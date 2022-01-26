@@ -75,6 +75,10 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
+<p>
+Don't forget to star ⭐ the repo it motivates me to share more open source
+</p>
+
 ## License
 
 ```text
